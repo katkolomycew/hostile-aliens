@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "jest": "^24.9.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}

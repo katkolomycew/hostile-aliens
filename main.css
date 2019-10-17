@@ -1,0 +1,135 @@
+* {
+	color: white;
+	font-family: 'Courier New', Courier, monospace;
+	cursor: crosshair;
+	overflow: hidden;
+}
+
+html, body {
+	background-color: black;
+	width: 100%;
+	height: 100%;
+}
+
+.shipPart {
+	position: absolute;
+	z-index: 2;
+}
+
+#ship {
+	background-color: white;
+	width: 24px;
+	height: 42px;
+	bottom: 75px;
+}
+
+.blasters {
+	background-color: blue;
+	width: 4px;
+	height: 64px;
+	bottom: 72px;
+}
+
+#front {
+	background-color: red;
+	width: 8px;
+	height: 32px;
+	bottom: 94px;
+}
+
+#back {
+	background-color: orange;
+	width: 20px;
+	height: 8px;
+	bottom: 75px;
+}
+
+.missile {
+	background-color: cyan;
+	width: 2px;
+	height: 6px;
+	position: absolute;
+	bottom: 112px;
+	z-index: 1;
+	animation: fire 560ms linear forwards;
+}
+
+@keyframes fire {
+	from {
+		bottom: 112px;
+	}
+	to {
+		bottom: 150%;
+	}
+}
+
+.object {
+	background-color: silver;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: -50px;
+	z-index: 0;
+	animation: hurl 2100ms linear forwards;
+}
+
+@keyframes hurl {
+	from {
+		top: -50px;
+	}
+	to {
+		top: 150%;
+	}
+}
+
+#start {
+	width: 80%;
+	height: 80%;
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	background-color: black;
+	border: solid 3px white;
+	z-index: 3;
+}
+
+#play {
+	background-color: black;
+	border: solid 2px white;
+	width: 50%;
+	height: 50%;
+	font-size: 3.6em;
+	position: absolute;
+	left: 25%;
+	top: 25%;
+	outline: none;
+}
+
+#credit {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+#score {
+	position: absolute;
+	left: 0;
+	bottom: -20px;
+}
+
+#highscore {
+	position: absolute;
+	right: 0;
+	bottom: -20px;
+}
+
+#time {
+	position: absolute;
+	left: 0;
+	top: -16px;
+}
+
+::selection {
+	background-color: white;
+	color: black;
+}
